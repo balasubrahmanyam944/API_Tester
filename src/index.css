@@ -1,0 +1,195 @@
+.main-app {
+  height: 100vh;
+  width: 100%;
+  background: #f7fafc;
+}
+
+html,
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+ 
+#app {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+ 
+.wrapper {
+  flex-grow: 1;
+  height: 100%;
+  position: relative;
+}
+
+/* Base node styles that apply to all nodes */
+.react-flow__node {
+  min-height: 50px;
+  min-width: 150px;
+  border: 1px solid #e2e8f0;
+  padding: 12px;
+  border-radius: 8px;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease;
+  z-index: 0;
+}
+
+/* Edge styles to appear in front of nodes */
+.react-flow__edges {
+  z-index: 5;
+}
+
+.react-flow__edge {
+  z-index: 5;
+}
+
+.react-flow__edge-path {
+  stroke-width: 2;
+  stroke: #b1b5bb;
+}
+
+.react-flow__edge:hover .react-flow__edge-path {
+  stroke: #4299e1;
+  stroke-width: 3;
+}
+
+.react-flow__node:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.react-flow__node label {
+  display: block;
+  color: #4a5568;
+  font-size: 12px;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+/* TextUpdater Node specific styles */
+.text-updater-node {
+  position: relative;
+  padding: 12px;
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+}
+
+.text-updater-node.dark {
+  background: #2a2a2a;
+  border-color: #555;
+  color: #eee;
+}
+
+.text-updater-node .delete-button {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  background: transparent;
+  border: none;
+  color: #a00;
+  font-weight: bold;
+  font-size: 10px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.text-updater-node.dark .delete-button {
+  color: #f88;
+}
+
+.text-updater-node .input-container {
+  margin-bottom: 8px;
+}
+
+.text-updater-node .input-container label {
+  color: #4a5568;
+}
+
+.text-updater-node.dark .input-container label {
+  color: #e2e8f0;
+}
+
+.text-updater-node .input-field {
+  width: 90%;
+  margin-top: 4px;
+  padding: 4px 8px;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  background: white;
+  color: #2d3748;
+}
+
+.text-updater-node.dark .input-field {
+  background: #444;
+  border-color: #555;
+  color: #eee;
+}
+
+.text-updater-node .add-input-button {
+  width: 100%;
+  padding: 4px 8px;
+  margin-top: 8px;
+  border: 1px solid #888;
+  border-radius: 4px;
+  background: #eee;
+  color: #000;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.text-updater-node.dark .add-input-button {
+  background: #555;
+  color: #fff;
+}
+
+/* Handle positioning */
+.react-flow__handle {
+  width: 8px;
+  height: 8px;
+  background: #e2e8f0;
+  border: 1px solid #cbd5e0;
+  z-index: 6;
+}
+
+.react-flow__handle-left {
+  left: -4px;
+}
+
+.react-flow__handle-right {
+  right: -4px;
+}
+
+.flow-container {
+  background: #f7fafc;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.flow-container:focus {
+  outline: 2px solid #4299e1;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.2);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e0;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a0aec0;
+}
